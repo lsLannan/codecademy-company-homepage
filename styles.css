@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* HEADER */
+  
+  .header-n-logo {
+    flex-direction: row;
+    /*border: 2px solid green;*/
+  }
+  
+  header {
+    background-color: rosybrown;
+    width: 100%;
+  }
+  
+  header h1 {
+    padding-top: 1rem;
+    padding-left: 0.4rem;
+  }
+  
+  .logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: grey;
+    padding: 1rem 0;
+  }
+  
+  nav a { 
+    /*border: 2px solid hotpink;*/
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0 1rem;
+  }
+  
+  
+  nav a:hover {
+    color: black;
+    /* transition */
+    transition: color 0.75s ease-out 100ms;
+  }
+  
+  /* MISSION STATEMENT */
+  
+  .mission-container {
+    color: white;
+    text-align: center;
+    background-color: gray;
+    /*border: 5px solid hotpink;*/
+    margin: auto;
+    width: 100%;
+  }
+  
+  .mission-statement {
+    background-image: url("https://cdn.pixabay.com/photo/2019/12/23/01/16/eyeliner-4713577_960_720.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 16rem;
+  
+  
+  }
+  
+  /* PRODUCTS */
+  
+  /*
+  .product-container {
+    border: 3px solid orange;
+  }
+  */
+  
+  .product-container h2  {
+    color: black;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  
+  .cool-products {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    /*border: 2px solid green;*/
+  }
+  
+  .product-card img {
+  
+    margin: 1rem 0;
+    height: 10rem;
+    width: 10rem;
+  }
+  
+  .product-card:hover {
+    box-shadow: 10px 10px;
+  }
+  
+  .product-card {
+    margin: 1rem 3rem;
+    padding: 2rem;
+    background-color: rosybrown;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .product-card h3 {
+      font-size: 3rem;
+    }
+  }
+  
+  /* EMPLOYEES */
+  
+  #employees {
+    /*border: 5px solid hotpink;*/
+    margin: 4rem 0;
+    text-align: center;
+  }
+  
+  .employee-container {
+    flex-direction: row;
+    justify-content: center;
+    /*border: 3px solid red;*/
+  }
+  
+  .employee-card {
+    width: 25%;
+    height: 25%;
+    padding: 1rem;
+  
+    /*border: 3px solid green;*/
+  }
+  
+  /* small screen */
+  @media only screen and (max-width: 480px) {
+    .employee-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    } 
+    .employee-card {
+      width: 50%;
+    }
+  }
+  
+  /* CONTACT */
+  
+  .contact-us {
+    text-align: center;
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: rosybrown;
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem ;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* MOBILE TIME */
+  
+  @media only screen and (max-width: 480px) {
+    .product-card {
+      width: 100%;
+    }
+    .product-card img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
