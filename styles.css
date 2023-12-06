@@ -5,10 +5,14 @@
   
   html {
     font-size: 16px;
+    color: #473636;
   }
   
   body {
     font-family: 'Bebas Neue', sans-serif;
+    background-color: whitesmoke;
+
+    /*border: 1px solid orange;*/
   }
   
   .container {
@@ -30,18 +34,20 @@
   
   header h1 {
     padding-top: 1rem;
-    padding-left: 0.4rem;
+    font-size: 3.5rem;
+
   }
   
   .logo {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
   }
   
   .navbar-container {
     flex-direction: row;
     justify-content: space-around;
-    background-color: grey;
+    background-color: #997474;
     padding: 1rem 0;
   }
   
@@ -55,9 +61,21 @@
   
   
   nav a:hover {
-    color: black;
+    color: #473636;
     /* transition */
     transition: color 0.75s ease-out 100ms;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .logo {
+        display: none;
+    }
+    .header-n-logo {
+        justify-content: center;
+    }
+    nav a {
+        font-size: 1rem;
+    }
   }
   
   /* MISSION STATEMENT */
@@ -65,19 +83,42 @@
   .mission-container {
     color: white;
     text-align: center;
-    background-color: gray;
+
     /*border: 5px solid hotpink;*/
     margin: auto;
     width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
   }
   
   .mission-statement {
-    background-image: url("https://cdn.pixabay.com/photo/2019/12/23/01/16/eyeliner-4713577_960_720.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-size: cover;
     width: 100%;
-    height: 16rem;
-  
-  
+    height: 50rem;
+    /*border: 5px solid blue;*/
+  }
+
+  .statement-area {
+    /*border: 1px solid green;*/
+
+    /*background-color: gray;*/
+    font-size: 2rem;
+    height: 25%;
+    padding: 2rem 0;
+    margin: 3rem 0;
+  }
+
+  /* Small screen */
+  @media only screen and (max-width: 480px) {
+    .mission-statement {
+        height: 15rem;
+    }
+    .statement-area {
+        font-size: 1rem;
+
+    }
   }
   
   /* PRODUCTS */
@@ -87,11 +128,45 @@
     border: 3px solid orange;
   }
   */
+
+  /*
+  #products {
+    margin-top: 3rem;
+  }*/
+
+  .shop-btn {
+    padding: 1rem 4rem;
+    background-color: #8FBDBD;
+    color: white;
+    border-radius: 1rem;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  #products h2 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 3rem;
+  }
   
+  .product-container {
+    /*border: 2px solid hotpink;*/
+    border-top: 1px solid rosybrown;
+    padding: 8rem ;
+    /*margin: 2rem 0;*/
+    flex-grow: 1;
+  }
+
   .product-container h2  {
-    color: black;
+    color: #473636;
     text-align: center;
     padding: 1rem 0;
+    font-size: 3rem;
   }
   
   
@@ -99,15 +174,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
     /*border: 2px solid green;*/
   }
   
   .product-card img {
-  
     margin: 1rem 0;
-    height: 10rem;
-    width: 10rem;
+    height: 75%;
+    width: 75%;
   }
   
   .product-card:hover {
@@ -115,15 +192,56 @@
   }
   
   .product-card {
-    margin: 1rem 3rem;
-    padding: 2rem;
+    margin: 3rem;
+    padding: 4rem;
     background-color: rosybrown;
     text-align: center;
+    font-size: 2rem;
+    align-items: center;
+    /*
+    height: 50%;
+    width: 50%;
+
+    border: 2px solid green;*/
+  }
+
+
+/* SMALL SCREENS*/
+  @media only screen and (max-width: 480px) {
+    .product-card {
+      width: 100%;
+      margin: 1.5rem;
+      padding: 2rem;
+    }
+    .product-card h3 {
+        font-size: 2rem;
+      }
+    .product-card img{
+      width: 100%;
+      height: 100%;
+    }
+    .product-container {
+        margin: 1rem 0;
+        padding: 0 2rem;
+    }
+    #products h2 {
+        margin-top: 1.5rem;
+        font-size: 2rem;
+      }
+      .cool-products {
+        display: flex;
+      }
+      .shop-btn {
+        text-align: center;
+        padding: 1rem;
+      }
   }
   
-  @media only screen and (max-width: 480px) {
-    .product-card h3 {
-      font-size: 3rem;
+  /* MED SCREEN */
+  @media only screen and (max-width: 780px) {
+    .shop-btn {
+        padding: 1rem;
+        width: 100%;
     }
   }
   
@@ -133,59 +251,104 @@
     /*border: 5px solid hotpink;*/
     margin: 4rem 0;
     text-align: center;
+    font-size: 3rem;
   }
-  
+
   .employee-container {
     flex-direction: row;
     justify-content: center;
+    margin-top: 5rem;
     /*border: 3px solid red;*/
   }
   
   .employee-card {
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
     padding: 1rem;
-  
+    margin: 0 5rem;
+    font-size: 2rem;
     /*border: 3px solid green;*/
+  }
+
+  .employee-card h3 {
+    margin-top: 1rem;
+    color: #EBB2B2;
   }
   
   /* small screen */
   @media only screen and (max-width: 480px) {
+    #employees {
+        margin: 1rem 0;
+    }
     .employee-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row wrap;
+    margin: 0;
+    
+    /*border: 3px solid green;*/
     } 
     .employee-card {
-      width: 50%;
+        width: 30%;
+        height: 30%;
+        margin: 0;
+
+        /*border: 3px solid blue;*/
     }
   }
-  
+
+  /* MEDIUM SCREEN */
+  @media only screen and (max-width: 780px) {
+    .employee-container {
+        flex-flow: row wrap;
+    }
+  }
+
+
+  /* BIGG SCREEN 
+  @media only screen and (min-width: 1024px) {
+    .employee-container {
+        margin: auto;
+    }
+    .employee-card {
+        width: 30%;
+        height: 30%;
+        margin: 1rem;
+      }
+  }*/
   /* CONTACT */
+
+  .contact-area {
+    /*border: 2px solid hotpink;*/
+    background-color: #EBB2B2;
+    color: #473636;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 2rem 0;
+    font-size: 2rem;
+  }
   
   .contact-us {
     text-align: center;
   }
+
+  @media only screen and (max-width: 480px) {
+    /*aaaa*/
+  }
   
   /* FOOTER */
   footer {
+    margin: 0;
     background-color: rosybrown;
     color: white;
-    padding: 1rem;
-    margin-top: 1rem ;
+    padding: 1rem 0;
+    padding-left: 1rem;
+
     bottom: 0;
-    width: 100%;
+
   }
   
   /* MOBILE TIME */
-  
   @media only screen and (max-width: 480px) {
-    .product-card {
-      width: 100%;
-    }
-    .product-card img{
-      width: 100%;
-      height: 100%;
+    footer {
+        width: auto;
     }
   }
-  
