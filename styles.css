@@ -255,7 +255,7 @@
   }
   
   /* MED SCREEN */
-  @media only screen and (max-width: 780px) {
+  @media only screen and (max-width: 1024px) {
     .shop-btn {
         padding: 1rem;
         width: 100% ;
@@ -321,7 +321,7 @@
   }
 
   /* MEDIUM SCREEN */
-  @media only screen and (max-width: 780px) {
+  @media only screen and (max-width: 1024px) {
     .employee-container {
         flex-flow: row wrap;
     }
